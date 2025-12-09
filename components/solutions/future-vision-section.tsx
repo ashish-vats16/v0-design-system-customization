@@ -21,8 +21,8 @@ const queries = [
 export function FutureVisionSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f9fafb] via-[#eff6ff]/20 to-[#f9fafb]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/10 rounded-full blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
         <motion.div
@@ -32,18 +32,18 @@ export function FutureVisionSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-primary mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#eff6ff] border border-[#3b82f6]/20 text-sm font-medium text-[#3b82f6] mb-6">
             <Cpu className="w-4 h-4" />
             Future Vision
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#111827] mb-6 text-balance">
             Where we're going
           </h2>
 
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            LuminaCore is moving toward a <span className="text-primary font-semibold">Video LLM for enterprises</span>{" "}
-            — where you can ask:
+          <p className="text-xl text-[#6b7280] max-w-3xl mx-auto leading-relaxed">
+            LuminaCore is moving toward a{" "}
+            <span className="text-[#3b82f6] font-semibold">Video LLM for enterprises</span> — where you can ask:
           </p>
         </motion.div>
 
@@ -56,13 +56,13 @@ export function FutureVisionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-strong rounded-2xl p-6 hover:bg-secondary/40 transition-all duration-300 group cursor-pointer"
+              className="bg-white/80 backdrop-blur-xl border border-[#e5e7eb] shadow-sm rounded-2xl p-6 hover:bg-[#eff6ff]/50 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <query.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-[#eff6ff] flex items-center justify-center shrink-0 group-hover:bg-[#dbeafe] transition-colors">
+                  <query.icon className="w-6 h-6 text-[#3b82f6]" />
                 </div>
-                <p className="text-lg text-foreground font-medium italic">{query.text}</p>
+                <p className="text-lg text-[#374151] font-medium italic">{query.text}</p>
               </div>
             </motion.div>
           ))}
@@ -74,18 +74,16 @@ export function FutureVisionSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="glass-strong rounded-3xl p-8 md:p-12"
+          className="bg-white/80 backdrop-blur-xl border border-[#e5e7eb] shadow-xl rounded-3xl p-8 md:p-12"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Today */}
             <div className="text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/50 text-sm font-medium text-muted-foreground mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f3f4f6] text-sm font-medium text-[#6b7280] mb-4">
                 Today
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Campaign Engine + Summarization</h3>
-              <p className="text-muted-foreground">
-                Turn long videos into actionable content and campaigns automatically.
-              </p>
+              <h3 className="text-2xl font-bold text-[#111827] mb-2">Campaign Engine + Summarization</h3>
+              <p className="text-[#6b7280]">Turn long videos into actionable content and campaigns automatically.</p>
             </div>
 
             {/* Arrow */}
@@ -94,7 +92,7 @@ export function FutureVisionSection() {
                 animate={{ x: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               >
-                <ArrowRight className="w-12 h-12 text-primary/50" />
+                <ArrowRight className="w-12 h-12 text-[#3b82f6]/50" />
               </motion.div>
             </div>
 
@@ -104,20 +102,20 @@ export function FutureVisionSection() {
                 animate={{ y: [0, 5, 0] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               >
-                <ArrowRight className="w-8 h-8 text-primary/50 rotate-90" />
+                <ArrowRight className="w-8 h-8 text-[#3b82f6]/50 rotate-90" />
               </motion.div>
             </div>
 
             {/* Tomorrow */}
             <div className="text-center md:text-left md:col-start-1 md:row-start-2 md:col-span-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 text-sm font-medium text-primary mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#eff6ff] text-sm font-medium text-[#3b82f6] mb-4">
                 <Sparkles className="w-4 h-4" />
                 Tomorrow
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
                 Video as a Searchable, Strategic Asset
               </h3>
-              <p className="text-muted-foreground max-w-2xl">
+              <p className="text-[#6b7280] max-w-2xl">
                 Query your entire video library like a database. Find insights, generate reports, and unlock the full
                 value of your video content.
               </p>

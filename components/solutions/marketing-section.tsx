@@ -32,8 +32,8 @@ const valueProps = [
 export function MarketingSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/10 to-background" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f9fafb] via-[#f0fdf4]/20 to-[#f9fafb]" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#10b981]/10 rounded-full blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -47,12 +47,12 @@ export function MarketingSection() {
           >
             <div className="relative aspect-square max-w-lg mx-auto">
               {/* Main Card */}
-              <div className="absolute inset-8 glass-strong rounded-3xl p-8 flex flex-col justify-center">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center mb-6">
-                  <Megaphone className="w-10 h-10 text-primary-foreground" />
+              <div className="absolute inset-8 bg-white/80 backdrop-blur-xl border border-[#e5e7eb] shadow-xl rounded-3xl p-8 flex flex-col justify-center">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#10b981] to-[#059669] flex items-center justify-center mb-6">
+                  <Megaphone className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Marketing Team</h3>
-                <p className="text-muted-foreground">Ship campaigns faster with AI-powered content</p>
+                <h3 className="text-2xl font-bold text-[#111827] mb-2">Marketing Team</h3>
+                <p className="text-[#6b7280]">Ship campaigns faster with AI-powered content</p>
 
                 {/* Value Props Mini Cards */}
                 <div className="mt-6 space-y-3">
@@ -63,10 +63,10 @@ export function MarketingSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-[#f0fdf4]"
                     >
-                      <prop.icon className="w-5 h-5 text-accent shrink-0" />
-                      <span className="text-sm text-foreground">{prop.text}</span>
+                      <prop.icon className="w-5 h-5 text-[#10b981] shrink-0" />
+                      <span className="text-sm text-[#374151]">{prop.text}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -76,10 +76,10 @@ export function MarketingSection() {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-4 left-4 flex items-center gap-2 px-4 py-2 rounded-full glass-strong"
+                className="absolute top-4 left-4 flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm border border-[#e5e7eb] shadow-md"
               >
-                <TrendingUp className="w-4 h-4 text-accent" />
-                <span className="text-sm font-medium text-foreground">Agency Ready</span>
+                <TrendingUp className="w-4 h-4 text-[#10b981]" />
+                <span className="text-sm font-medium text-[#374151]">Agency Ready</span>
               </motion.div>
             </div>
           </motion.div>
@@ -92,18 +92,16 @@ export function MarketingSection() {
             transition={{ duration: 0.6 }}
             className="order-1 lg:order-2"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-accent mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f0fdf4] border border-[#10b981]/20 text-sm font-medium text-[#10b981] mb-6">
               <Megaphone className="w-4 h-4" />
               Solution 2
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#111827] mb-4 text-balance">
               Marketing Teams & Agencies
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Ship campaigns faster. Reuse content smarter.
-            </p>
+            <p className="text-xl text-[#6b7280] mb-8 leading-relaxed">Ship campaigns faster. Reuse content smarter.</p>
 
             <div className="space-y-4 mb-10">
               {features.map((feature, index) => (
@@ -113,17 +111,20 @@ export function MarketingSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl glass hover:bg-secondary/40 transition-all duration-300"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-[#e5e7eb] hover:bg-[#f0fdf4]/50 transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                    <feature.icon className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-xl bg-[#f0fdf4] flex items-center justify-center shrink-0">
+                    <feature.icon className="w-5 h-5 text-[#10b981]" />
                   </div>
-                  <p className="text-foreground font-medium pt-2">{feature.text}</p>
+                  <p className="text-[#374151] font-medium pt-2">{feature.text}</p>
                 </motion.div>
               ))}
             </div>
 
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2 group">
+            <Button
+              size="lg"
+              className="bg-[#10b981] text-white hover:bg-[#059669] gap-2 group shadow-lg shadow-[#10b981]/25"
+            >
               See Marketing Solutions
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
